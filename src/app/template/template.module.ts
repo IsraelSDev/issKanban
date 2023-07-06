@@ -1,17 +1,22 @@
 import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
+import {CommonModule, NgOptimizedImage} from '@angular/common';
 import {SidebarComponent} from './sidebar/sidebar.component';
-
+import {CoreModule} from "../../core/core.module";
+import {TopbarComponent} from './topbar/topbar.component';
 
 @NgModule({
   declarations: [
-    SidebarComponent
+    SidebarComponent,
+    TopbarComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    CoreModule,
+    NgOptimizedImage,
   ],
   exports: [
-    SidebarComponent
+    SidebarComponent,
+    TopbarComponent
   ]
 })
 export class TemplateModule {

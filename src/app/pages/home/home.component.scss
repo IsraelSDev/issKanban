@@ -1,0 +1,35 @@
+aside {
+  position: absolute;
+  top: 0;
+  transform: translateX(0px);
+  transition: transform 200ms ease;
+}
+
+.isHidden {
+  transform: translateX(-300px);
+  transition: transform 200ms ease;
+
+  &.btn-show-sidebar ~ .dashboard {
+    transform: translateX(300px);
+    transition: transform 200ms ease;
+    width: calc(100% - 300px);
+  }
+
+  .dashboard {
+    width: 100%;
+  }
+}
+
+
+button {
+  width: 56px;
+  height: 48px;
+  background-color: var(--iss-purple);
+  outline: 0;
+  border: 0;
+  border-top-right-radius: 150px;
+  border-bottom-right-radius: 150px;
+  position: fixed;
+  top: 90vh;
+}
+

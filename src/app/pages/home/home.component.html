@@ -1,4 +1,15 @@
-<p>home works!</p>
+<aside [ngClass]="{'isHidden': !isSideBarVisible}" class="sidebar">
+  <app-sidebar></app-sidebar>
+</aside>
+<aside [ngClass]="{'isHidden': isSideBarVisible}" class="btn-show-sidebar">
+  <button (click)="showSideBar()">
+    <img alt="icon-eye" ngSrc="assets/icon-show-sidebar.svg" width="16" height="10"/>
+  </button>
+</aside>
+<header>
+</header>
+<div class="dashboard d-flex flex-column">
+  <app-topbar></app-topbar>
+  <router-outlet></router-outlet>
+</div>
 
-<app-button [title]="'CLICK-ME'"></app-button>
-<app-button [title]="'CLICK-ME-2'"></app-button>

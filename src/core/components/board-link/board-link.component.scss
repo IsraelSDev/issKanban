@@ -1,0 +1,52 @@
+a, button {
+  letter-spacing: normal;
+  text-decoration: none;
+  padding: 14px 36px;
+  margin-left: -2.3rem;
+  border-top-right-radius: 150px;
+  border-bottom-right-radius: 150px;
+  color: var(--iss-medium-line);
+
+  &:hover {
+    transition: 0.2s;
+    background: var(--iss-purple-hover);
+    color: var(--iss-purple);
+
+    .icon-board {
+      background-image: url("/assets/icon-add-task.svg");
+    }
+  }
+
+  span {
+    margin-right: 1rem;
+    font: var(--iss-font-m);
+  }
+
+  img {
+    margin-right: 10px;
+  }
+
+
+  &.active {
+    color: var(--iss-white);
+    background-color: var(--iss-purple);
+
+    .icon-board {
+      background-image: url("/assets/icon-add-task-light.svg");
+    }
+  }
+}
+
+button {
+  outline: 0;
+  border: 0;
+  background-color: transparent;
+  font: var(--iss-text-m);
+  color: var(--iss-purple);
+}
+
+.icon-board {
+  width: 16px;
+  height: 16px;
+  background-image: url("/assets/icon-board.svg");
+}

@@ -1,0 +1,35 @@
+input {
+  width: 100%;
+  border-radius: 4px;
+  padding: 9px 1rem;
+  border: 1px solid rgba(130, 143, 163, 0.25);
+  background: var(--iss-white);
+  max-width: 350px;
+  font: var(--iss-font-m);
+  outline: 0;
+  color: var(--iss-black);
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+
+  &::placeholder {
+    opacity: 0.25;
+  }
+}
+
+span {
+  display: flex;
+  color: #EA5555;
+  align-items: center;
+  font: var(--iss-font-m);
+  position: relative;
+  left: calc(-15%);
+}
+
+
+.invalid {
+  border: 1px solid var(--iss-red);
+}
+
+
+

@@ -1,0 +1,4 @@
+<div class="d-flex w-100">
+  <input [ngClass]="{'invalid': invalid}" required type="text" [name]="name" [id]="name" [placeholder]="placeholder">
+  <span *ngIf="invalid" class="w-75">Can't be empty</span>
+</div>

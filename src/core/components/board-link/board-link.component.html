@@ -1,0 +1,16 @@
+<a *ngIf="!newBoardLink; else newBoardLinkTemplate" [routerLink]="['/'+route]" class="d-flex align-items-center"
+   routerLinkActive="active">
+  <span class="icon-board"></span>
+  <span>{{name || 'title button'}}</span>
+</a>
+
+<ng-template #newBoardLinkTemplate>
+  <button
+    class="d-flex align-items-center"
+    routerLinkActive="active"
+    (click)="openNewBoard()"
+  >
+    <img ngSrc="assets/icon-add-task.svg" alt="new-board" width="16" height="16"/>
+    <span>+Create New Board</span>
+  </button>
+</ng-template>

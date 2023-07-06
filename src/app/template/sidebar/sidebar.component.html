@@ -1,1 +1,14 @@
-<p>sidebar works!</p>
+<div class="d-flex flex-column main p-4">
+  <div class="">
+    <img [src]="'assets/logo-'+theme+'.svg'" alt="kanban-logo" width="150" height="26"/>
+  </div>
+  <div class="col">
+    <app-boards-list></app-boards-list>
+  </div>
+  <div class="col d-flex flex-column justify-content-end">
+    <app-switch-theme></app-switch-theme>
+    <br>
+    <app-button [disabled]="false" [iconId]="1" [title]="'Hide Sidebar'" (click)="hideSideBar()">TOGGLE SIDEBAR
+    </app-button>
+  </div>
+</div>

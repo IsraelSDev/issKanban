@@ -1,0 +1,48 @@
+div {
+
+  select {
+    max-width: 350px;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid rgba(130, 143, 163, 0.25);
+    padding: 5px 1rem;
+    outline: 0;
+    -webkit-appearance: none;
+    width: 100%;
+    background-color: transparent;
+    font: var(--iss-text-m);
+    font-weight: bold;
+
+    &:focus {
+      border: 1px solid var(--iss-purple);
+    }
+
+    &:focus + img {
+      transform: rotate(0deg);
+      transform-origin: center center;
+      transition: transform ease-in-out 100ms;
+    }
+
+    option {
+      font: var(--iss-text-m);
+      color: var(--iss-medium-line);
+      font-weight: normal;
+    }
+
+  }
+
+  img {
+    margin-left: -30px;
+    transform: rotate(90deg);
+    transform-origin: center center;
+    transition: transform ease-in-out 100ms;
+  }
+
+
+  &:hover::before {
+    color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+}
+

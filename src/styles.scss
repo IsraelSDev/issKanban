@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
+
 * {
   margin: 0;
   padding: 0;
@@ -13,24 +14,35 @@ html, body {
 }
 
 :root {
-
-  --iss-purple: #635FC7;
-  --iss-purple-hover: #A8A4FF;
-  --iss-black: #000112;
-  --iss-very-dark-gray: #20212C;
-  --iss-dark-gray: #2B2C37;
-  --iss-dark-line: #3E3F4E;
-  --iss-medium-line: #828FA3;
-  --iss-light-line: #828FA3;
-  --iss-light-gray: #F4F7FD;
-  --iss-white: #FFFFFF;
   --iss-red: #EA5555;
   --iss-red-hover: #FF9898;
+  --iss-purple: rgba(99, 95, 199);
+  --iss-btn-add: var(--iss-purple);
+  --iss-purple-hover: rgba(168, 164, 255, 0.1);
+  --iss-black: #000112;
+  --iss-very-dark-gray: #20212C;
+  --iss-medium-line: #828FA3;
+  --iss-line: #828FA3;
+  --iss-gray: #F4F7FD;
+  --iss-white: #FFFFFF;
+  --iss-font: var(--iss-black);
+  --iss-bg: var(--iss-white);
+  --iss-dark-gray: var(--iss-gray);
 
-  --iss-font-xl: bold 54px 'Plus Jakarta Sans';
-  --iss-font-l: bold 23px/18px 'Plus Jakarta Sans';
-  --iss-font-m: bold 19px/15px 'Plus Jakarta Sans';
-  --iss-font-s: bold 15px/12px 'Plus Jakarta Sans' 2.4px;
-  --iss-text-m: medium 23px/13px 'Plus Jakarta Sans';
-  --iss-text-s: bold 15px/12px 'Plus Jakarta Sans';
+  .dark {
+    --iss-line: #3E3F4E;
+    --iss-gray: #2B2C37;
+    --iss-dark-gray: var(--iss-very-dark-gray);
+    --iss-bg: var(--iss-gray);
+    --iss-font: var(--iss-white);
+  }
+
+  --iss-font-btn: normal 13px/23px 'Plus Jakarta Sans';
+  --iss-font-xl: bold 24px/30px 'Plus Jakarta Sans';
+  --iss-font-l: bold 18px/23px 'Plus Jakarta Sans';
+  --iss-font-m: bold 15px/19px 'Plus Jakarta Sans';
+  --iss-font-s: bold 12px/15px 'Plus Jakarta Sans' 2.4px;
+  --iss-text-m: medium 13px/23px 'Plus Jakarta Sans';
+  --iss-text-s: bold 12px/15px 'Plus Jakarta Sans';
+
 }

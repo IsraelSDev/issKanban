@@ -1,0 +1,70 @@
+.primary-l, .primary-s {
+  background: var(--iss-purple);
+
+  &:hover {
+    background: var(--iss-purple-hover);
+  }
+}
+
+.primary-l {
+  height: 48px;
+  font: var(--iss-font-m);
+}
+
+.secondary {
+  border-radius: 20px;
+  color: var(--iss-purple);
+  background: rgba(99, 95, 199, 0.10);
+
+  &:hover {
+    background: rgba(99, 95, 199, 0.25);
+  }
+}
+
+.task-add {
+  background: var(--iss-btn-add);
+
+  &:hover {
+    background: rgba(168, 164, 255, 0.8);
+  }
+}
+
+.destructive {
+  background: var(--iss-red);
+
+  &:hover {
+    background: var(--iss-red-hover);
+  }
+}
+
+button {
+  width: 255px;
+  height: 40px;
+  color: var(--iss-white);
+  font: var(--iss-font-btn);
+  font-weight: 700;
+  outline: 0;
+  border: 0;
+  flex-shrink: 0;
+  border-radius: 24px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  transition: 0.2s;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.btn-hidden {
+  color: var(--iss-medium-line);
+  box-shadow: none;
+  background: transparent;
+
+  img {
+    margin-right: 15px;
+  }
+}
+
+disabled{
+  opacity: 0.1;
+}

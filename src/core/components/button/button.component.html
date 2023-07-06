@@ -1,4 +1,13 @@
-<button
-  [value]="value">
+<button [ngStyle]="{'width': w+'px'}" [ngClass]="type" *ngIf="iconId === 0; else withIconBtn">
   {{title}}
 </button>
+
+<ng-template #withIconBtn>
+  <button class="d-flex " [ngClass]="{ 'btn-hidden': iconId !== 0}" [disabled]="disabled">
+    <img [ngSrc]="iconId === 1 ? 'assets/icon-hide-sidebar.svg' :  ''"
+         alt=""
+         width="18" height="18">
+    {{title}}
+  </button>
+</ng-template>
+

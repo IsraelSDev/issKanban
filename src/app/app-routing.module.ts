@@ -1,14 +1,22 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {AppComponent} from "./app.component";
+
 import {HomeComponent} from "./pages/home/home.component";
+import {BoardTasksComponent} from "../core/components/board-tasks/board-tasks.component";
 
 const routes: Routes = [
-  {
-    path: '',
-    component: HomeComponent
-  }
-];
+    {
+      path: '',
+      component: HomeComponent,
+      children: [
+        {
+          path: ':id',
+          component: BoardTasksComponent
+        }
+      ]
+    }
+  ]
+;
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
