@@ -1,0 +1,19 @@
+<div class="panel-columns">
+  <ng-container *ngIf="currentBoard; else emptyBoard">
+    <div class="d-flex columns-list">
+      <div *ngFor="let column of currentBoard.columns">
+        <app-column [titleColumn]="column.description" [tasks]="column.tasks" [color]="column.color"></app-column>
+      </div>
+      <div class="ultima-coluna d-flex flex-column justify-content-center align-items-center" (click)="newColumn()">
+        <h4>+ New Column</h4>
+      </div>
+    </div>
+  </ng-container>
+
+  <ng-template #emptyBoard>
+    <div class="container-fluid p-4 task-board-empty  d-flex justify-content-center flex-column align-items-center">
+      <p>This board is empty. Create a new column to get started.</p>
+      <app-button [title]="'+ Add New Column'" [type]="'task-add'"></app-button>
+    </div>
+  </ng-template>
+</div>

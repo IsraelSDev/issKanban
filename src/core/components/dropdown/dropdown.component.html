@@ -1,6 +1,7 @@
 <div class="d-flex align-items-center">
   <select [name]="name">
-    <option *ngFor="let option of options" [value]="option">{{option}}</option>
+    <option *ngFor="let option of options" [value]="option"
+            (change)="handleSelectOptions(option)">{{option}}</option>
   </select>
   <img alt="img" ngSrc="assets/icon-chevron-down.svg" height="10" width="15"/>
 </div>

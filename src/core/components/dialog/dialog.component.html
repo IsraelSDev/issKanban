@@ -1,3 +1,10 @@
-<ng-template [ngIf]="data.modalTypeId === 1">
-  <app-new-board-dialog></app-new-board-dialog>
-</ng-template>
+<div class="container-fluid" [class]="mode">
+  <ng-template [ngIf]="data.modalTypeId === 1">
+    <app-new-board-dialog (close)="onNoClick()"></app-new-board-dialog>
+  </ng-template>
+  <ng-template [ngIf]="data.modalTypeId === 2">
+    <app-edit-board-dialog (close)="onNoClick()"></app-edit-board-dialog>
+  </ng-template>
+
+
+</div>

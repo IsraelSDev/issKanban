@@ -8,9 +8,12 @@ import {SwitchThemeComponent} from './components/switch-theme/switch-theme.compo
 import {BoardsListComponent} from './components/boards-list/boards-list.component';
 import {BoardLinkComponent} from './components/board-link/board-link.component';
 import {RouterLink, RouterLinkActive} from "@angular/router";
-import {BoardTasksComponent} from './components/board-tasks/board-tasks.component';
+import {BoardPanelComponent} from './components/board-panel/board-panel.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import {CustomDialogsModule} from "./components/dialog/dialog.module";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {EllipsisPipe} from "./pipes/ellipsis.pipe";
+import { ColumnComponent } from './components/column/column.component';
 
 
 @NgModule({
@@ -22,7 +25,9 @@ import {CustomDialogsModule} from "./components/dialog/dialog.module";
     SwitchThemeComponent,
     BoardsListComponent,
     BoardLinkComponent,
-    BoardTasksComponent,
+    BoardPanelComponent,
+    EllipsisPipe,
+    ColumnComponent
   ],
   exports: [
     ButtonComponent,
@@ -32,16 +37,17 @@ import {CustomDialogsModule} from "./components/dialog/dialog.module";
     SwitchThemeComponent,
     BoardsListComponent,
     BoardLinkComponent,
-    BoardTasksComponent,
-
-    MatDialogModule
+    BoardPanelComponent,
+    MatDialogModule,
+    EllipsisPipe
   ],
   imports: [
     CommonModule,
-    CustomDialogsModule,
     NgOptimizedImage,
     RouterLink,
     RouterLinkActive,
+    ReactiveFormsModule,
+    FormsModule,
   ]
 })
 export class CoreModule {

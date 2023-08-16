@@ -1,1 +1,24 @@
-<p>new-board-dialog works!</p>
+<form [formGroup]="newBoardForm" class="d-flex flex-column justify-content-center">
+  <h2>Add New Board</h2>
+
+  <app-textfield (handleCampo)="handleName($event)" [name]="'Name'"
+                 [placeholder]="'e.g. Web Design'"></app-textfield>
+
+
+  <span>Columns</span>
+
+  <ng-container *ngFor="let column of columnsList">
+    <div class="w-100 d-flex justify-content-center align-items-center list-column-add">
+      <div class="w-90">
+        <app-textfield [name]="''" (handleCampo)="handleColumn($event, column.id)"></app-textfield>
+      </div>
+      <div class="w-10">
+        <input style="height: 25px; width: 25px;" type="button" (click)="deleteColumn(column.id)">
+      </div>
+    </div>
+  </ng-container>
+
+
+  <app-button (click)="addNewColumn()" [type]="'secondary'" [title]="'+ Add New Column'" [w]="416"></app-button>
+  <app-button (click)="createNewBoard()" [type]="'primary-l'" [title]="'Create New Board'" [w]="416"></app-button>
+</form>

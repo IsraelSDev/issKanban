@@ -2,7 +2,7 @@ import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 
 import {HomeComponent} from "./pages/home/home.component";
-import {BoardTasksComponent} from "../core/components/board-tasks/board-tasks.component";
+import {BoardPanelComponent} from "../core/components/board-panel/board-panel.component";
 
 const routes: Routes = [
     {
@@ -11,7 +11,7 @@ const routes: Routes = [
       children: [
         {
           path: ':id',
-          component: BoardTasksComponent
+          component: BoardPanelComponent
         }
       ]
     }

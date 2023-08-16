@@ -1,7 +1,9 @@
 <a *ngIf="!newBoardLink; else newBoardLinkTemplate" [routerLink]="['/'+route]" class="d-flex align-items-center"
-   routerLinkActive="active">
+   routerLinkActive="active"
+   (click)="handleBoard(id)"
+>
   <span class="icon-board"></span>
-  <span>{{name || 'title button'}}</span>
+  <span>{{name || 'title button' | ellipsis}}</span>
 </a>
 
 <ng-template #newBoardLinkTemplate>

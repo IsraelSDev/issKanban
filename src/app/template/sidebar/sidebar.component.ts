@@ -19,6 +19,7 @@ export class SidebarComponent {
   public theme: string = ''
   public isSideBarShow: boolean = true;
 
+
   constructor(private store: Store<AppState>) {
   }
 

@@ -1,0 +1,54 @@
+.task-board-empty {
+  height: calc(100vh - 112px);
+  font: var(--iss-font-m);
+  background-color: var(--iss-dark-gray);
+
+  p {
+    font: var(--iss-font-l);
+    color: var(--iss-medium-line);
+    margin-bottom: 32px;
+  }
+}
+
+.panel-columns {
+  margin-top: 1px;
+  margin-left: 1px;
+  padding-top: 24px;
+  padding-left: 24px;
+  min-height: calc(100vh - 113px);
+  background-color: var(--iss-gray);
+
+  .columns-list {
+    overflow-x: scroll;
+    padding-bottom: 50px;
+
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+
+
+    &::-webkit-scrollbar-track {
+      border-radius: 1px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: var(--iss-purple-hover);
+      border-radius: 15px;
+    }
+  }
+
+
+  .ultima-coluna {
+    margin-right: 20px;
+    cursor: pointer;
+    min-width: 280px;
+    min-height: calc(100vh - 50%);
+    border-radius: 6px;
+    background: linear-gradient(180deg, #E9EFFA 0%, rgba(233, 239, 250, 0.50) 100%);
+
+    h4 {
+      color: var(--iss-line);
+      font: var(--iss-font-l);
+    }
+  }
+}

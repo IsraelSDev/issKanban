@@ -1,0 +1,7 @@
+<div class="container d-flex p-4 flex-column">
+  <app-textfield [name]="'New column name: '" [placeholder]="'Column name: '" [title]="'Column name: '"
+                 (handleCampo)="newColumn($event)"></app-textfield>
+
+  <br>
+  <app-button [title]="'Cadastrar'" (click)="cadNewColumn()"></app-button>
+</div>

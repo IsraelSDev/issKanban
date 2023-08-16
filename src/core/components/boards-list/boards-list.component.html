@@ -1,8 +1,10 @@
 <div class="container board-list d-flex flex-column justify-content-start">
-  <p>All boards (2)</p>
+  <p>All boards ({{boardRoutes.length}})</p>
 
-  <app-board-link [route]="'/dashboard-1'"></app-board-link>
-  <app-board-link [route]="'/dashboard-2'"></app-board-link>
+  <ng-container *ngFor="let route of boardRoutes">
+    <app-board-link [route]="route.name" [name]="route.name" [id]="route.id"></app-board-link>
+  </ng-container>
+
   <app-board-link [newBoardLink]="true" [route]="'/dashboard-1'"></app-board-link>
 
 </div>

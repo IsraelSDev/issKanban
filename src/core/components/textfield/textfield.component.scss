@@ -3,11 +3,11 @@ input {
   border-radius: 4px;
   padding: 9px 1rem;
   border: 1px solid rgba(130, 143, 163, 0.25);
-  background: var(--iss-white);
-  max-width: 350px;
+  background: var(--iss-bg);
+  max-width: 416px;
   font: var(--iss-font-m);
   outline: 0;
-  color: var(--iss-black);
+  color: var(--iss-font);
   display: flex;
   justify-content: space-between;
   height: 40px;
@@ -31,5 +31,9 @@ span {
   border: 1px solid var(--iss-red);
 }
 
-
+label {
+  font: var(--iss-font-m);
+  color: var(--iss-medium-line);
+  margin-bottom: 8px;
+}
 

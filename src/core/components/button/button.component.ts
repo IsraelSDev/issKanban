@@ -8,7 +8,7 @@ import {Component, Input} from '@angular/core';
 export class ButtonComponent {
 
   @Input() title: string = '';
-  @Input() type: string = '';
+  @Input() type: string = 'primary-l';
   @Input() iconId: number = 0;
   @Input() disabled: boolean = false;
   @Input() w: number = 174;

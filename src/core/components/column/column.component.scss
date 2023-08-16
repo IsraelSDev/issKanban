@@ -1,0 +1,25 @@
+.column-board {
+  width: 280px;
+
+
+  .column-board-title {
+
+    margin-bottom: 24px;
+
+    .circle {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      margin-right: 12px;
+    }
+
+    h3 {
+      font: var(--iss-font-s);
+      margin: 0;
+      text-transform: uppercase;
+      letter-spacing: 2.4px;
+      color: var(--iss-medium-line)
+    }
+  }
+
+}

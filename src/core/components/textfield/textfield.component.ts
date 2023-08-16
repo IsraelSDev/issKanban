@@ -1,4 +1,4 @@
-import {Component, Input, ViewChild} from '@angular/core';
+import {Component, EventEmitter, Input, Output, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-textfield',
@@ -7,8 +7,15 @@ import {Component, Input, ViewChild} from '@angular/core';
 })
 export class TextfieldComponent {
 
+
   @Input() name: string = '';
   @Input() placeholder: string = '';
   @Input() invalid: boolean = false;
+  @Output() handleCampo: EventEmitter<any> = new EventEmitter()
 
+  valorPreenchido: string = '';
+
+  changeTextField(valorNovo: string): void {
+    this.handleCampo.emit(valorNovo);
+  }
 }

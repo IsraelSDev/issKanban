@@ -1,4 +1,8 @@
 <div class="d-flex w-100">
-  <input [ngClass]="{'invalid': invalid}" required type="text" [name]="name" [id]="name" [placeholder]="placeholder">
+  <div class="d-flex flex-column w-100">
+    <label *ngIf="name" [for]="name">{{name}}</label>
+    <input [ngClass]="{'invalid': invalid}" required type="text" [name]="name" [id]="name" [placeholder]="placeholder"
+           [(ngModel)]="valorPreenchido" (ngModelChange)="changeTextField($event)">
+  </div>
   <span *ngIf="invalid" class="w-75">Can't be empty</span>
 </div>

@@ -1,0 +1,51 @@
+
+form {
+  max-width: 480px;
+
+  h2 {
+    font: var(--iss-font-l);
+    color: var(--iss-font);
+    margin-bottom: 24px;
+  }
+
+  app-button {
+    margin-top: 24px;
+  }
+
+  app-textfield:nth-of-type(2) {
+    margin-top: 24px;
+  }
+
+  span {
+    font: var(--iss-font-m);
+    color: var(--iss-medium-line);
+    margin-bottom: 8px;
+    margin-top: 12px;
+  }
+
+}
+
+.list-column-add {
+
+  margin: 12px 0;
+
+  div:first-of-type {
+    width: 100%;
+  }
+
+  div:nth-of-type(2) {
+    width: 7%;
+    height: 25px;
+    margin-left: 16px;
+  }
+
+  input[type="button"] {
+    border: 0;
+    background-position: center;
+    background-color: transparent;
+    background-image: url('/assets/icon-cross.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+}
